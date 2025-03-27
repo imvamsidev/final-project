@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Tumor Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Brain Tumor Detector</h1>
+        <div class="upload-section">
+            <input type="file" id="imageInput" accept="image/*" style="display: none;">
+            <button id="uploadBtn" class="btn">Upload Image</button>
+        </div>
+        <div class="image-container">
+            <div class="image-box">
+                <h3>Original Image</h3>
+                <img id="preview" src="" alt="Image Preview">
+            </div>
+            <div class="image-box">
+                <h3>Detection Result</h3>
+                <img id="result" src="" alt="Result">
+            </div>
+        </div>
+        <div id="message" class="message"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
